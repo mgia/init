@@ -1,0 +1,3 @@
+# ps for list of running processes
+
+kill [PID]

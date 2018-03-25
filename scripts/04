@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# crontab
+# 0 0 * * * ~/scripts/04
+
+SUMFILE=~/.sumfile
+CRONFILE=/etc/crontab
+HASH=$(md5sum $CRONFILE)
+
+if [ ! -f $SUMFILE ]; then
+	md5sum $CRONFILE > $SUMFILE
+else
+	if [ "$(cat $SUMFILE)" != "$(md5sum $CRONFILE)" ]; then
+		mail -s "Crontab modified" root
+		md5sum $CRONFILE  > $SUMFILE
+	fi
+fi
