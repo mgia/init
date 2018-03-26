@@ -1,1 +1,3 @@
+# shell & backgrounding operator 
+
 tail -f /var/log/syslog &

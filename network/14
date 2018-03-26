@@ -1,1 +1,1 @@
-# dig -x 10.51.1.81
+dig -x 10.51.1.81 | grep "ANSWER SECTION" -A1 | tail -n 1 | awk '{print $5}'

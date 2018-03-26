@@ -1,1 +1,4 @@
-nat (10.0.0.1)
+# NAT translates the IP addresses of computers in a local network to a single IP address.
+# This address is often used by the router that connects the computers to the Internet.
+
+nat (10.90.1.11)

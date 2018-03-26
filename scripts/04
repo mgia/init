@@ -5,7 +5,6 @@
 
 SUMFILE=~/.sumfile
 CRONFILE=/etc/crontab
-HASH=$(md5sum $CRONFILE)
 
 if [ ! -f $SUMFILE ]; then
 	md5sum $CRONFILE > $SUMFILE
